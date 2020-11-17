@@ -1,0 +1,16 @@
+<div class="container">
+  <div id="add_product">
+    <%= simple_form_for [ @product ] do |f| %>
+      <%= f.input :name %>
+      <%= f.input :description %>
+      <%= f.input :price %>
+      <%= f.input :address %>
+      <%# user_id ==> automatique ? %>
+      <%# mettre la photo %>
+  <div class ="btn_new">
+      <%= f.submit "Submit", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+
+</div>
