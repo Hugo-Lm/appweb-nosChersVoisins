@@ -13,4 +13,11 @@ class ProductPolicy < ApplicationPolicy
     return true
   end
 
+  def new?
+    record.user == user || user.admin
+  end
+
+  def create?
+    record.user == user || user.admin
+  end
 end
