@@ -14,10 +14,10 @@ class ProductPolicy < ApplicationPolicy
   end
 
   def new?
-    record.user == user || user.admin
+    user.id != nil
   end
 
   def create?
-    record.user == user || user.admin
+    user.id != nil
   end
 end

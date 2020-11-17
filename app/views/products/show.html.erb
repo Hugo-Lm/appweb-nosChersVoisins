@@ -1,14 +1,19 @@
 <div class="flex-container">
   <%# <div class ="product-card"> %>
 
-    <h1><%=@product.name %></h1> 
-    <p><%=@product.description %></p> 
-    <p><%=@product.price %></p> 
+    <h1><%=@product.name %></h1>
+    <p><%=@product.description %></p>
+    <p><%=@product.price %></p>
 
+    <%= simple_form_for [@product, @booking] do |f| %>
+      <%= f.input :start_date %>
+      <%= f.input :end_date %>
+      <%= f.button :submit %>
+    <% end %>
 
     <%# <div class="add_date"> %>
-        <%# <%= f.label :product, "Your rental date" %> 
-        <%# <%= f.date_select :dateinstructed, :order => [:day, :month, :year] %> 
+        <%# <%= f.label :product, "Your rental date" %>
+        <%# <%= f.date_select :dateinstructed, :order => [:day, :month, :year] %>
 
 
     <%# # bouton pour book product %>
