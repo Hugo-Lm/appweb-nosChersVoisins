@@ -13,13 +13,13 @@ class ProductsController < ApplicationController
     end
 
     def new
-        record.user == user || user.admin
         @product = Product.new
+        authorize @product
     end
 
     def create
-        authorize @product
         @product = Product.find(params[:id])
+        authorize @product
         if @product.save
             redirect_to products_path(id: @product.id)
         else
@@ -30,7 +30,7 @@ class ProductsController < ApplicationController
     private
 
     def products_params
-        params.require(:product).permit(:name, :description, :price, :adress, :owner_id)
+        params.require(:product).permit(:name, :description, :price, :adress, :user_id)
     end
 
 end

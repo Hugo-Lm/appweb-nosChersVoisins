@@ -5,8 +5,12 @@ class ProductPolicy < ApplicationPolicy
     end
   end
 
-  def create?
+  def index?
     return true
   end
-  
+
+  def show?
+    return true
+  end
+
 end

@@ -1,0 +1,18 @@
+<div class="flex-container">
+  <%# <div class ="product-card"> %>
+
+  <h1><%=Product.name %></h1> 
+  <p><%= Product.description %></p> 
+  <p><%= Product.price %></p> 
+  <p><%= Product.user_id %></p> 
+
+<div id="add_date">
+    <%= simple_form_for [ @cocktail ] do |f| %>
+      <%= f.input :name %>
+      <%= f.input :photo, as: :file %>
+
+  2 input pour la date debut de loc et fin de loc
+  bouton pour book product
+  mettre un total
+
+</div>

@@ -3,12 +3,11 @@ class ApplicationPolicy
 
   def initialize(user, record)
     @user = user
-    @product = product
     @record = record
   end
 
   def index?
-    true
+    false
   end
 
   def show?
