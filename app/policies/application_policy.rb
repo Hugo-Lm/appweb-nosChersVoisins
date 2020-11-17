@@ -15,11 +15,11 @@ class ApplicationPolicy
   end
 
   def create?
-    new?
+    false
   end
 
   def new?
-    record.user == user
+    create?
   end
 
   def update?

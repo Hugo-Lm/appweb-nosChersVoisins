@@ -1,16 +1,12 @@
-<div class="flex-container">
-  <%# <div class ="product-card"> %>
+<h1>All products</h1>
 
-  <h1>All products</h1> 
-
-    <% @products.each do |product| %>
-          <div class="card col sm-6" style="background-image: url(http://kitt.lewagon.com/placeholder/cities/lyon)">
-              <tr>
-                <td><%= product.name %></td>
-                <td><%= product.price %></td>
-                <td><%= product.user_id %></td>
-              </tr>
-              <a href="#" class="btn btn-primary">See more</a>
-            </div>
-    <% end %>
-</div>
+<ul>
+  <% @products.each do |product| %>
+    <li>
+      <%= link_to product.name, product_path(product.id) %>
+      <td><%= product.price %></td> <br>
+      <td><%= User.find(product.user_id).first_name %></td>
+      <td><%= User.find(product.user_id).last_name %></td>
+    </li>
+  <% end %>
+</ul>

@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
 
 
-    skip_before_action :authenticate_user!, only: %i[index show] 
+    skip_before_action :authenticate_user!, only: %i[index show]
 
     def index
         @products = policy_scope(Product).order(created_at: :desc)
@@ -10,6 +10,7 @@ class ProductsController < ApplicationController
 
     def show
         @product = Product.find(params[:id])
+        @booking = Booking.new
         authorize @product
     end
 
@@ -19,10 +20,11 @@ class ProductsController < ApplicationController
     end
 
     def create
-        @product = Product.find(params[:id])
+        @product = Product.new(products_params)
+        @product.user_id = current_user.id
         authorize @product
         if @product.save
-            redirect_to products_path(id: @product.id)
+            redirect_to products_path
         else
             render :new
         end
@@ -31,7 +33,6 @@ class ProductsController < ApplicationController
     private
 
     def products_params
-        params.require(:product).permit(:name, :description, :price, :adress, :user_id)
+        params.require(:product).permit(:name, :description, :price, :address, :user_id)
     end
-
 end
