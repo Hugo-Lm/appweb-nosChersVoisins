@@ -3,11 +3,12 @@ class ApplicationPolicy
 
   def initialize(user, record)
     @user = user
+    @product = product
     @record = record
   end
 
   def index?
-    false
+    true
   end
 
   def show?
@@ -15,11 +16,11 @@ class ApplicationPolicy
   end
 
   def create?
-    false
+    new?
   end
 
   def new?
-    create?
+    record.user == user
   end
 
   def update?

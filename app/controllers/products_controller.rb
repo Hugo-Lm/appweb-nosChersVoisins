@@ -1,9 +1,11 @@
-authorize @product
-
 class ProductsController < ApplicationController
 
+
+    skip_before_action :authenticate_user!, only: %i[index show] 
+
     def index
-        @products = Product.all
+        @products = policy_scope(Product).order(created_at: :desc)
+        console
     end
 
     def show
@@ -16,8 +18,9 @@ class ProductsController < ApplicationController
     end
 
     def create
+        authorize @product
         @product = Product.find(params[:id])
-        @product.save
+        if @product.save
             redirect_to products_path(id: @product.id)
         else
             render :new
