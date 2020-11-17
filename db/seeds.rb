@@ -12,7 +12,7 @@ puts 'Creating 10 fake user, 10 fake products and 10 fake bookings ...'
 
 puts "Creating a user1"
 
-10.times do
+3.times do
   user1 = User.new(
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
@@ -24,29 +24,31 @@ puts "Creating a user1"
 end
 
 puts "User created"
-puts "Creating product for user1"
-10.times do
-  user = User.find(rand(1..10))
+
+puts "Creating products"
+3.times do
+  user = User.find(rand(1..3))
   product = Product.new(
-    name: Faker::Internet.email,
+    name: Faker::Drone.name ,
     price: rand(150),
     address: user.address,
     user_id: user.id
-    )
-    product.save!
+  )
+  product.save!
 end
-
 puts "Product creatd"
-puts "Create a Booking"
-10.times do
 
+puts "Create a Booking"
+3.times do
   booking = Booking.new(
     start_date: 0.days.from_now,
     end_date: 2.days.from_now,
-    user_id: rand(1..10),
-    product_id: rand(1..10)
+    user_id: rand(1..3),
+    product_id: rand(1..3)
     )
   booking.save!
-
 end
 puts "Booking created"
+
+
+
