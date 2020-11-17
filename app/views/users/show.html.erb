@@ -1,3 +1,14 @@
 <h2> <%=@user.first_name %> <%= @user.last_name %></h2>
 <span> <%= @user.address %> </span>
 <p>  <%= @user.email %> </p>
+
+<ul>
+
+  <% @user.bookings.each do |booking| %>
+  <li>
+    <%= booking.start_date %> <br>
+    <%= booking.end_date %> <br>
+    <%= Product.find(booking.product_id).name %>
+  </li>
+  <% end %>
+</ul>
