@@ -17,6 +17,9 @@
         <li class="nav-item">
           <%= link_to 'Se déconnecter', destroy_user_session_path, method: :delete, class:"nav-link"%>
         </li>
+        <li class="nav-item dropdown">
+          <a href="users/"><img class="profil-picture" id="navbarDropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/ssaunier" /></a>
+        </li>
       <% else %>
         <li class="nav-item">
           <%= link_to 'Sign in', new_user_session_path, class:"nav-link"%>
@@ -27,10 +30,6 @@
         </li>
 
       <% end %>
-
-      <li class="nav-item dropdown">
-         <a href="users/"><img class="profil-picture" id="navbarDropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/ssaunier" /></a>
-      </li>
 
     </ul>
   </div>
