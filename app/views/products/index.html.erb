@@ -1,12 +1,29 @@
-<h1>All products</h1>
 
-<ul>
-  <% @products.each do |product| %>
-    <li>
-      <%= link_to product.name, product_path(product.id) %>
-      <td><%= product.price %></td> <br>
-      <td><%= User.find(product.user_id).first_name %></td>
-      <td><%= User.find(product.user_id).last_name %></td>
-    </li>
-  <% end %>
-</ul>
+
+<div class="container">
+<h1>All products</h1>
+  <div class ="row">
+        <% @products.each do |product| %>
+          <div class ="col-12 col-lg-4">
+            <div class="card p-4" style="width: 18rem;">
+              <div class="imd-pdt">
+                <img class="card-img-top" src="https://images-na.ssl-images-amazon.com/images/I/81iyL9dJtiL._AC_SX466_.jpg" alt="Card image cap">
+              </div>
+              <div class="bloc-2">
+                <div class="card-title">
+                    <%= link_to product.name, product_path(product.id) %>
+                </div>
+              <div class="structure">
+                <img class="profil-picture" src="https://thispersondoesnotexist.com/image" alt="profil picture">
+                <div class="card-body">
+                    <td><%= product.price %>€ / jour</td> <br>
+                    <td><%= User.find(product.user_id).first_name %></td>
+                    <td><%= User.find(product.user_id).last_name %></td>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        <% end %>
+  </div>
+</div>
