@@ -1,0 +1,60 @@
+.show-product {
+  padding: 20px;
+}
+
+.product-img{
+  height: 500px;
+  background-image: url('https://images-na.ssl-images-amazon.com/images/I/81iyL9dJtiL._AC_SX466_.jpg');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  // border-radius: 50px; MARCHE PAS
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; // sépare les différente élément verticalement. Amélioration : Réduire l'espace.
+}
+
+.product-name { // faire en sorte que la border prend la taille du text mais ne marche pas
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  inline-size: auto;
+
+  h1 {
+    inline-size: auto;
+    writing-mode: horizontal-tb;
+    margin-bottom: 0px;
+  }
+}
+
+.product-description {
+  p {
+    margin-bottom: 0px;
+  }
+}
+
+.owner-profil {
+  display: flex;
+  align-items: center;
+
+  img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    margin-right: 30px;
+  }
+
+  .owner-info {
+
+    p {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+.form-start-date {
+  display: flex;
+  flex-direction: column;
+}

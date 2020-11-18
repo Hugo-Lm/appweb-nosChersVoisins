@@ -1,15 +1,38 @@
-<div class="flex-container">
+<div class="flex-container show-product">
   <%# <div class ="product-card"> %>
+      <div class="row">
 
-    <h1><%=@product.name %></h1>
-    <p><%=@product.description %></p>
-    <p><%=@product.price %></p>
+        <div class="col-12 col-lg-5 product-img">
 
-    <%= simple_form_for [@product, @booking] do |f| %>
-      <%= f.input :start_date %>
-      <%= f.input :end_date %>
-      <%= f.button :submit %>
-    <% end %>
+        </div>
+
+        <div class="clo-12 col-lg-5 product-info">
+          <div class="product-name">
+            <h1><%=@product.name %></h1>
+          </div>
+          <div class="product-description">
+            <p><%=@product.description %></p>
+          </div>
+          <div class="owner-profil">
+            <img src="https://thispersondoesnotexist.com/image" alt="Owner picture">
+            <div class="owner-info">
+              <p><%= @product.user.first_name %></p>
+              <p>50M away</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-2 booking-info">
+        </div>
+          <%= simple_form_for [@product, @booking] do |f| %>
+
+            <%= f.input :start_date %>
+            <%= f.input :end_date %>
+            <%= f.button :submit %>
+
+          <% end %>
+
+      </div>
 
     <%# <div class="add_date"> %>
         <%# <%= f.label :product, "Your rental date" %>
