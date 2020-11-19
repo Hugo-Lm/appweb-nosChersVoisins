@@ -6,10 +6,10 @@ class User < ApplicationRecord
   validates :password, presence: true
 
   validates :email, uniqueness: true
-
   has_many :bookings
   has_many :products
   has_many :booked_products, through: :bookings, class_name: "Product", source: :product
+  has_one_attached :photo
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
