@@ -1,15 +1,32 @@
-<h2 id="name"> <%=@user.first_name %> <%= @user.last_name %></h2>
-<span id="address"> <%= @user.address %> </span>
-<p id="user">  <%= @user.email %> </p>
+<div class="container">
+    <h2 id="name"> <%=@user.first_name %> <%= @user.last_name %></h2>
+    <p id="infos-perso">
+      Mes informations personnelles : 
+    </p>
+    <div class="user-infos">
+      <div class="user-perso">
+        <span id="user"> <%= @user.address %> </span>
+        <p id="email">  <%= @user.email %> </p>
+      </div>
+  </div> 
 
-<ul>
+  <p id="mes-resas">
+    Mes réservations :
+  </p>
 
-  <% @user.bookings.each do |booking| %>
-  <li>
-    <%= booking.start_date %> <br>
-    <%= booking.end_date %> <br>
-    <%= Product.find(booking.product_id).name %>
-    <%= link_to 'Annuler cette location', booking_path(booking), method: :delete %>
-  </li>
-  <% end %>
-</ul>
+  <div class="reservation">
+    <% @user.bookings.each do |booking| %>
+        <div class="card-user">
+            <%= Product.find(booking.product_id).name %> <br>
+            <br>
+            <%= booking.start_date %> <br>
+            <%= booking.end_date %> <br>
+            <br>
+            <%= link_to 'Annuler cette location', booking_path(booking), method: :delete, id:"bouton-delete", class: "green-bouton" %> <br>          
+        </div>
+    <% end %>
+  </div>
+
+</div>
+
+
