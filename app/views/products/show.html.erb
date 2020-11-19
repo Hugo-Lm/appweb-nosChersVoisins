@@ -1,17 +1,15 @@
 <div class="flex-container show-product">
+  <%# <div class ="product-card"> %>
+      <div class="row">
 
-    <div class="row">
+        <div class="col-12 col-lg-5 product-img">
 
-      <div class="col-12 col-lg-5 product-img">
+        </div>
 
-      </div>
+        <div class="clo-12 col-lg-4 product-info">
 
-      <div class="clo-12 col-lg-7">
+          <h1 id="product-name"><%=@product.name %></h1>
 
-        <div class="product-info">
-          <div class="product-name">
-            <h1><%=@product.name %></h1>
-          </div>
           <div class="product-description">
             <p><%=@product.description %></p>
           </div>
@@ -24,16 +22,25 @@
           </div>
         </div>
 
-        <div class="booking">
+        <div class="col-12 col-lg-3 booking-info">
           <%= simple_form_for [@product, @booking] do |f| %>
+
             <%= f.input :start_date %>
             <%= f.input :end_date %>
             <%= f.button :submit %>
+
           <% end %>
         </div>
 
       </div>
 
+    <%# <div class="add_date"> %>
+        <%# <%= f.label :product, "Your rental date" %>
+        <%# <%= f.date_select :dateinstructed, :order => [:day, :month, :year] %>
 
-    </div>
+
+    <%# # bouton pour book product %>
+    <%# mettre un total %>
+
+    <%# </div> %>
 </div>
