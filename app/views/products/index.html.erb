@@ -24,15 +24,15 @@
         <div class="card p-3">
 
           <div class="card-top">
-            <img class="profil-picture" src="https://thispersondoesnotexist.com/image" alt="profil picture">
-            <div class="user-infos">
+              <img class="profil-picture" src="https://thispersondoesnotexist.com/image" alt="profil picture">            
+              <div class="user-infos">
               <p class="user-name"><%= User.find(product.user_id).first_name %> </p>
               <p class="user-distance">150m</p>
             </div>
           </div>
 
 
-          <img class="card-img-top" src="https://images-na.ssl-images-amazon.com/images/I/81iyL9dJtiL._AC_SX466_.jpg" alt="Card image cap">
+          <%= cl_image_tag product.photo.key, height: 300, width: 400, crop: :fill, class: "card-img-top" %>
 
           <div class="card-bottom">
             <div class="card-title">
