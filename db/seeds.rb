@@ -66,6 +66,7 @@ puts "Creating 5 products"
 user = User.find(2)
 product = Product.new(
   name: "Barbecue famillial",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
   price: rand(10..20),
   address: user.address,
   user_id: user.id
@@ -77,6 +78,7 @@ product.photo.attach(io: file, filename: 'barbecue1.jpg', content_type: 'image/j
 user = User.find(3)
 product = Product.new(
   name: "Racletzor 4000",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
   price: rand(10..20),
   address: user.address,
   user_id: user.id
@@ -89,6 +91,7 @@ product.photo.attach(io: file, filename: 'raclette.jpg', content_type: 'image/jp
 user = User.find(3)
 product = Product.new(
   name: "Barbecue à charbon",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
   price: rand(10..20),
   address: user.address,
   user_id: user.id
@@ -100,6 +103,7 @@ product.photo.attach(io: file, filename: 'barbecue2.jpg', content_type: 'image/j
 user = User.find(2)
 product = Product.new(
   name: "Boite à outils",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
   price: rand(10..20),
   address: user.address,
   user_id: user.id
@@ -112,6 +116,7 @@ product.photo.attach(io: file, filename: 'outils.jpg', content_type: 'image/jpeg
 user = User.find(1)
 product = Product.new(
   name: "Barbecue tout-en-un",
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
   price: rand(10..20),
   address: user.address,
   user_id: user.id
