@@ -4,7 +4,6 @@
 
 .product-img{
   height: 500px;
-  background-image: url('https://images-na.ssl-images-amazon.com/images/I/81iyL9dJtiL._AC_SX466_.jpg');
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -14,7 +13,7 @@
 .product-info {
   display: flex;
   flex-direction: column;
-  justify-content: space-around; // sépare les différente élément verticalement. Amélioration : Réduire l'espace.
+  justify-content: space-between; // sépare les différente élément verticalement. Amélioration : Réduire l'espace.
 }
 
 .product-name { // faire en sorte que la border prend la taille du text mais ne marche pas
@@ -58,3 +57,4 @@
   display: flex;
   flex-direction: column;
 }
+
