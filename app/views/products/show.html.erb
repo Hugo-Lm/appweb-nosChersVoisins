@@ -13,7 +13,7 @@
             <p><%=@product.description %></p>
           </div>
           <div class="owner-profil">
-            <img src="https://thispersondoesnotexist.com/image" alt="Owner picture">
+            <%= cl_image_tag @product.user.photo.key, crop: :fill, class: "profil-picture" %>
             <div class="owner-info">
               <p><%= @product.user.first_name %></p>
               <p>50M away</p>
