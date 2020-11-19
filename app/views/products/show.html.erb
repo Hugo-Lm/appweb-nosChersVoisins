@@ -6,10 +6,10 @@
 
         </div>
 
-        <div class="clo-12 col-lg-5 product-info">
-          <div class="product-name">
-            <h1><%=@product.name %></h1>
-          </div>
+        <div class="clo-12 col-lg-4 product-info">
+
+          <h1 id="product-name"><%=@product.name %></h1>
+
           <div class="product-description">
             <p><%=@product.description %></p>
           </div>
@@ -22,8 +22,7 @@
           </div>
         </div>
 
-        <div class="col-12 col-lg-2 booking-info">
-        </div>
+        <div class="col-12 col-lg-3 booking-info">
           <%= simple_form_for [@product, @booking] do |f| %>
 
             <%= f.input :start_date %>
@@ -31,6 +30,7 @@
             <%= f.button :submit %>
 
           <% end %>
+        </div>
 
       </div>
 
