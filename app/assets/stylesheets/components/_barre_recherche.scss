@@ -1,0 +1,40 @@
+
+
+.nav {
+    background-color: white;
+  
+}
+
+.img-svg-text {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 50px;
+    align-items: center;
+    color: #9d9d9d;
+}
+
+p {
+    margin-left: 10px;
+    margin-bottom: 0px;
+    color: #9d9d9d;
+}
+
+.form-control {
+    margin: 13px;
+    width: 400px;
+    border-radius: 10px;
+}
+
+ul {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 35px;
+    margin-right: 35px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    border-radius: 1px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
