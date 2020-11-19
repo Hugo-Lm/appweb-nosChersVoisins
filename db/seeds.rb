@@ -11,21 +11,46 @@ require "open-uri"
 
 
 puts "Creating 3 users"
-3.times do
-  user = User.new(
-    first_name: Faker::Name.first_name,
-    last_name: Faker::Name.last_name,
-    address: Faker::Address.street_name,
-    email: Faker::Internet.email,
-    password: "abcdef"
-  )
-  user.save!
-end
+
+user = User.new(
+  first_name: "Angela",
+  last_name: Faker::Name.last_name,
+  address: Faker::Address.street_name,
+  email: Faker::Internet.email,
+  password: "abcdef"
+)
+user.save!
+file = URI.open('https://www.meetic.fr/p/img/590/955/80/1/c/d3AtY29udGVudC91cGxvYWRzL3NpdGVzLzQvMjAxOS8wNC8=/photo-profil-1-1024x683.jpg')
+user.photo.attach(io: file, filename: 'user1.jpg', content_type: 'image/jpeg')
+
+user = User.new(
+  first_name: "Eric",
+  last_name: Faker::Name.last_name,
+  address: Faker::Address.street_name,
+  email: Faker::Internet.email,
+  password: "abcdef"
+)
+user.save!
+file = URI.open('https://www.jeancoutu.com/globalassets/revamp/photo/conseils-photo/20160302-01-reseaux-sociaux-profil/photo-profil_301783868.jpg')
+user.photo.attach(io: file, filename: 'user2.jpg', content_type: 'image/jpeg')
+
+user = User.new(
+  first_name: "Natasha",
+  last_name: Faker::Name.last_name,
+  address: Faker::Address.street_name,
+  email: Faker::Internet.email,
+  password: "abcdef"
+)
+user.save!
+file = URI.open('https://yscorporate.com/wp-content/uploads/2017/09/Photo-de-profil-professionnelle-par-photographe-6-e1577007219550.jpg')
+user.photo.attach(io: file, filename: 'user3.jpg', content_type: 'image/jpeg')
+
+
 puts "Users created"
 
 
 
-puts "Creating 3 products"
+puts "Creating 5 products"
 
 user = User.find(rand(1..3))
 product = Product.new(
