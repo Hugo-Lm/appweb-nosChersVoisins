@@ -8,22 +8,25 @@
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-
   // border-radius: 50px; MARCHE PAS
 }
 
 .product-info {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; // sépare les différente élément verticalement. Amélioration : Réduire l'espace.
+  justify-content: space-around; // sépare les différente élément verticalement. Amélioration : Réduire l'espace.
 }
 
-#product-name { // faire en sorte que la border prend la taille du text mais ne marche pas
+.product-name { // faire en sorte que la border prend la taille du text mais ne marche pas
   border-top: 1px solid lightgray;
   border-bottom: 1px solid lightgray;
-  flex: content;
-  text-align: center;
+  inline-size: auto;
 
+  h1 {
+    inline-size: auto;
+    writing-mode: horizontal-tb;
+    margin-bottom: 0px;
+  }
 }
 
 .product-description {
@@ -51,16 +54,7 @@
   }
 }
 
-.booking-info {
+.form-start-date {
   display: flex;
-  align-items: center;
+  flex-direction: column;
 }
-
-.new_booking {
-  border: 0.5px solid lightgray;
-  padding: 5px;
-  border-radius: 3px;
-  background-color: white;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-}
-

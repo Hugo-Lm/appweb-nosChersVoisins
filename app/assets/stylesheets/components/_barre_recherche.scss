@@ -1,9 +1,13 @@
 
 
-.nav {
+.search-bar {
+    display: flex;
     background-color: white;
-  
-}
+    margin-top: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    margin-bottom: 16px;
+  }
 
 .img-svg-text {
     display: flex;
@@ -25,16 +29,12 @@ p {
     border-radius: 10px;
 }
 
-ul {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 35px;
-    margin-right: 35px;
+form {
+  display: flex;
 }
 
-.nav {
-    display: flex;
-    align-items: center;
-    border-radius: 1px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+.search-btn {
+  margin: 13px;
+  border: none;
 }
+
