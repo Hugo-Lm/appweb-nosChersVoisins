@@ -1,14 +1,12 @@
 <div class="container">
-    <h2 id="name"> <%=@user.first_name %> <%= @user.last_name %></h2>
-    <p id="infos-perso">
-      Mes informations personnelles : 
-    </p>
     <div class="user-infos-2">
-      <div class="user-perso">
-        <span id="user"> <%= @user.address %> </span>
-        <p id="email">  <%= @user.email %> </p>
-      </div>
-  </div> 
+      <img id="image-user" src="https://images.squarespace-cdn.com/content/v1/53af1c83e4b0b3e1fc2000bd/1446397787787-SI1H06DNOL2QJSX13DCD/ke17ZwdGBToddI8pDm48kOyctPanBqSdf7WQMpY1FsRZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpwwQIrqN0bcqL_6-iJCOAA0qwytzcs0JTq1XS2aqVbyK6GtMIM7F0DGeOwCXa63_4k/Randy+Krum+Profile+Photo+square.jpg">
+    <div class="info-utilisateur">
+      <h2 id="name"> <%=@user.first_name %> <%= @user.last_name %></h2>
+      <span id="user"> <%= @user.address %> </span>
+      <p id="email">  <%= @user.email %> </p>
+    </div>
+    </div>
 
   <p id="mes-resas">
     Mes réservations :
