@@ -1,5 +1,7 @@
-<div class="container">
-  <div id="add_product">
+<div class="container-form">
+
+  <div class="form">
+
     <%= simple_form_for [ @product ] do |f| %>
       <%= f.input :name %>
       <%= f.input :description %>
@@ -7,9 +9,10 @@
       <%= f.input :address %>
       <%= f.input :photo, as: :file %>
       <%# @user_id = current_user.user_id %>
-  <div class ="btn_new">
+    <div class ="btn_new">
       <%= f.submit "Submit", class: "green-bouton" %>
     <% end %>
+    </div>
   </div>
 </div>
 
