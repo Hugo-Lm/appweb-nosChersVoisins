@@ -13,17 +13,6 @@ require "open-uri"
 puts "Creating 3 users"
 
 user = User.new(
-  first_name: "Angela",
-  last_name: Faker::Name.last_name,
-  address: Faker::Address.street_name,
-  email: Faker::Internet.email,
-  password: "abcdef"
-)
-user.save!
-file = URI.open('https://www.meetic.fr/p/img/590/955/80/1/c/d3AtY29udGVudC91cGxvYWRzL3NpdGVzLzQvMjAxOS8wNC8=/photo-profil-1-1024x683.jpg')
-user.photo.attach(io: file, filename: 'user1.jpg', content_type: 'image/jpeg')
-
-user = User.new(
   first_name: "Eric",
   last_name: Faker::Name.last_name,
   address: Faker::Address.street_name,
@@ -31,7 +20,18 @@ user = User.new(
   password: "abcdef"
 )
 user.save!
-file = URI.open('https://www.jeancoutu.com/globalassets/revamp/photo/conseils-photo/20160302-01-reseaux-sociaux-profil/photo-profil_301783868.jpg')
+file = URI.open('https://www.sardiniauniqueproperties.com/wp-content/uploads/2015/10/square-profile-pic-2.jpg')
+user.photo.attach(io: file, filename: 'user1.jpg', content_type: 'image/jpeg')
+
+user = User.new(
+  first_name: "Francis",
+  last_name: Faker::Name.last_name,
+  address: Faker::Address.street_name,
+  email: Faker::Internet.email,
+  password: "abcdef"
+)
+user.save!
+file = URI.open('https://worldbusinessfitness.com/wp-content/uploads/2018/01/opulent-profile-square-07.jpg')
 user.photo.attach(io: file, filename: 'user2.jpg', content_type: 'image/jpeg')
 
 user = User.new(
@@ -42,8 +42,19 @@ user = User.new(
   password: "abcdef"
 )
 user.save!
-file = URI.open('https://yscorporate.com/wp-content/uploads/2017/09/Photo-de-profil-professionnelle-par-photographe-6-e1577007219550.jpg')
+file = URI.open('https://worldbusinessfitness.com/wp-content/uploads/2018/06/opulent-profile-square-06.jpg')
 user.photo.attach(io: file, filename: 'user3.jpg', content_type: 'image/jpeg')
+
+user = User.new(
+  first_name: "Jean-Michel",
+  last_name: "Lopez",
+  address: "12 rue de Tourcoing",
+  email: "michou@mail.fr",
+  password: "abcdef"
+)
+user.save!
+file = URI.open('https://images.squarespace-cdn.com/content/v1/53af1c83e4b0b3e1fc2000bd/1446397787787-SI1H06DNOL2QJSX13DCD/ke17ZwdGBToddI8pDm48kOyctPanBqSdf7WQMpY1FsRZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpwwQIrqN0bcqL_6-iJCOAA0qwytzcs0JTq1XS2aqVbyK6GtMIM7F0DGeOwCXa63_4k/Randy+Krum+Profile+Photo+square.jpg')
+user.photo.attach(io: file, filename: 'user4.jpg', content_type: 'image/jpeg')
 
 
 puts "Users created"
@@ -52,7 +63,7 @@ puts "Users created"
 
 puts "Creating 5 products"
 
-user = User.find(rand(1..3))
+user = User.find(2)
 product = Product.new(
   name: "Barbecue famillial",
   price: rand(10..20),
@@ -63,7 +74,7 @@ product.save!
 file = URI.open('https://images-na.ssl-images-amazon.com/images/I/61ruYjKAARL._AC_SY450_.jpg')
 product.photo.attach(io: file, filename: 'barbecue1.jpg', content_type: 'image/jpeg')
 
-user = User.find(rand(1..3))
+user = User.find(3)
 product = Product.new(
   name: "Racletzor 4000",
   price: rand(10..20),
@@ -75,7 +86,7 @@ file = URI.open('https://www.gifi.fr/media/catalog/product/cache/1/image/9df78ea
 product.photo.attach(io: file, filename: 'raclette.jpg', content_type: 'image/jpeg')
 
 
-user = User.find(rand(1..3))
+user = User.find(3)
 product = Product.new(
   name: "Barbecue à charbon",
   price: rand(10..20),
@@ -86,7 +97,7 @@ product.save!
 file = URI.open('https://images-na.ssl-images-amazon.com/images/I/81iyL9dJtiL._AC_SX466_.jpg')
 product.photo.attach(io: file, filename: 'barbecue2.jpg', content_type: 'image/jpeg')
 
-user = User.find(rand(1..3))
+user = User.find(2)
 product = Product.new(
   name: "Boite à outils",
   price: rand(10..20),
@@ -98,7 +109,7 @@ file = URI.open('https://www.bricorama.fr/media/catalog/product/2/2/22cf49e2ebe0
 product.photo.attach(io: file, filename: 'outils.jpg', content_type: 'image/jpeg')
 
 
-user = User.find(rand(1..3))
+user = User.find(1)
 product = Product.new(
   name: "Barbecue tout-en-un",
   price: rand(10..20),
