@@ -5,8 +5,8 @@
       <%= f.input :description %>
       <%= f.input :price %>
       <%= f.input :address %>
+      <%= f.input :photo, as: :file %>
       <%# @user_id = current_user.user_id %>
-      <%# mettre la photo %>
   <div class ="btn_new">
       <%= f.submit "Submit", class: "green-bouton" %>
     <% end %>
