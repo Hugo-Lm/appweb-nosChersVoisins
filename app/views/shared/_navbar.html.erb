@@ -18,7 +18,9 @@
           <%= link_to 'Se déconnecter', destroy_user_session_path, method: :delete, class:"nav-link"%>
         </li>
         <li class="nav-item dropdown">
-          <a href="users/"><img class="profil-picture" id="navbarDropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/ssaunier" /></a>
+          <%= link_to user_path(current_user) do %>
+            <img class="profil-picture" id="navbarDropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/ssaunier" /></a>
+          <% end %>
         </li>
       <% else %>
         <li class="nav-item">

@@ -2,7 +2,13 @@ class ProductsController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index show]
 
   def index
-    @products = policy_scope(Product).order(created_at: :desc)
+    if params[:query].present?
+      @products = policy_scope(Product).search_by_name(params[:query])
+      authorize @products
+    else
+      @products = policy_scope(Product).order(created_at: :desc)
+      authorize @products
+    end
   end
 
   def show

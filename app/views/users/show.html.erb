@@ -9,7 +9,7 @@
     <%= booking.start_date %> <br>
     <%= booking.end_date %> <br>
     <%= Product.find(booking.product_id).name %>
-    <%= link_to 'Annuler cette location', booking_path, method: :delete %>
+    <%= link_to 'Annuler cette location', booking_path(booking), method: :delete %>
   </li>
   <% end %>
 </ul>

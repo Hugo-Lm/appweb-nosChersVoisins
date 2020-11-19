@@ -38,6 +38,8 @@ gem 'pundit'
 gem 'dotenv-rails', groups: [:development, :test]
 
 
+gem 'pg_search', '~> 2.3.0'
+
 group :development, :test do
   gem 'pry-byebug'
   gem 'pry-rails'
