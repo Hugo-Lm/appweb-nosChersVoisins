@@ -1,52 +1,77 @@
 
-  .card {
+.card {
 //     background-size: cover;
 //     background-position: center;
-    border-radius: 1px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  border-radius: 15px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
 //     display: grid;
-    // align-items: center;
+  // align-items: center;
 //     justify-content: space-around;
 //     font-size: 22px;
 //     text-shadow: 0 0 10px rgba(0,0,0,0.7);
-    margin: 32px;
+  margin: 16px 8px;
+  &:hover {
+    transition: box-shadow 0.2s;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
   }
+}
 
-  .card-title {
-    align-items: center;
-    text-align: center;
-    justify-content: space-around;
-  }
+.card-title {
+  align-items: center;
+  font-family: "Nunito", "Helvetica", "sans-serif";
+  font-size: 18px;
+}
 
-  .card-title a {
-      color: #33b48b;
-      text-decoration: none;
-  }
-
-  .card-body {
-    align-items: right;
-    color: black;
-    text-decoration: none;
-    justify-content: space-around;
-    text-align: right;
-    display: flex;
-    padding: left;
+.card-title a {
+  text-transform: capitalize;
+  color: black;
+  font-size: 18px;
 }
 
 .profil-picture {
   display: flex;
-  width: 75px;
-  height: 75px;
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
+  border: solid 2px white;
 //   justify-content: space-between;
 }
 
-.structure {
-    display: flex;
-    justify-content: space-between;
+
+.card-bottom {
+    margin-top: 15px;
 }
 
 .bloc-2 {
     margin: 10px;
     padding: 10px;
+}
+
+.user-name {
+  margin-bottom: 0;
+  text-transform: capitalize;
+  color: black;
+  font-size: 15px;
+}
+
+.user-infos {
+  margin-left: 10px;
+  color: #8c8a86;
+}
+
+.card-top {
+  display: flex;
+}
+
+.product-price {
+  display: flex;
+  align-items: baseline;
+}
+
+.price1 {
+  font-size: 21px;
+}
+
+.price2 {
+  color: #8c8a86;
 }
