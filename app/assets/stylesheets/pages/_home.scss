@@ -4,13 +4,44 @@
   height: 100vh;
   background-size: cover;
   background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-content {
+
 }
 
 .slogan {
-  padding-top: 50px;
-  padding-left: 20%;
   font-family: $font1;
   font-size: 2.3em;
 }
 
 
+.search {
+  width: 450px;
+  border: none;
+  font-size: 20px;
+}
+
+.search-container {
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 4px;
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 20px;
+    &:hover {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+  }
+}
