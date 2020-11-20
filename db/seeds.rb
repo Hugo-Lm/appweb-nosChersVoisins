@@ -138,8 +138,8 @@ puts "Create a Booking"
   booking = Booking.new(
     start_date: 0.days.from_now,
     end_date: 2.days.from_now,
-    user_id: rand(1..3),
-    product_id: rand(1..5)
+    user: User.all.sample,
+    product: Product.all.sample
     )
   booking.save!
 end
