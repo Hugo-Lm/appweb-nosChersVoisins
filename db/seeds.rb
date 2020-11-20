@@ -9,6 +9,10 @@
 require 'faker'
 require "open-uri"
 
+Booking.destroy_all
+Product.destroy_all
+User.destroy_all
+
 
 puts "Creating 3 users"
 
