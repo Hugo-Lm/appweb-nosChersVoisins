@@ -9,6 +9,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow:hidden;
 }
 
 .main-content {
@@ -48,4 +49,8 @@
       font-weight: bold;
     }
   }
+}
+
+html, body {
+  min-height: 100%;
 }
