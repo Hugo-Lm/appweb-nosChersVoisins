@@ -28,9 +28,9 @@ import flatpickr from "flatpickr";
 
 const initFlatpickr = () => {
   const datepickrs = document.querySelectorAll(".flatpickr")
-  debugger
+
   if (datepickrs.length) {
-    debugger
+
     flatpickr(".flatpickr", {mode: "range"});
   }
 }
