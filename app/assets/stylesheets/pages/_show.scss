@@ -1,5 +1,7 @@
 .show-product {
   padding: 20px;
+  margin-bottom: 56px;
+  margin-top: 30px;
 }
 
 .product-img{
@@ -7,7 +9,8 @@
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  // border-radius: 50px; MARCHE PAS
+  border-radius: 50px;
+  background-color: white;
 }
 
 .product-info {
