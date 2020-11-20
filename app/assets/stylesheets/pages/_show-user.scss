@@ -15,6 +15,13 @@
     align-items: center;
     display: flex;
     flex-direction: column;
+    color: #898888;
+}
+
+#image-user {
+    border-radius: 50%;
+    width: 200px;
+    margin-top: 50px;
 }
 
 #infos-perso {
@@ -31,16 +38,20 @@
     font-weight: bold;
 }
 
-.user-infos {
+.user-infos-2 {
     text-align: left;
     align-items: center;
-    width: 300px;
-    height: 100px;
-    border-radius: 15px;
-    box-shadow: 0 0 6px rgba(0,0,0,0.1);
-    margin-right: 15px;
+    width: 100%;
     border-width: 1px;
-    margin-top: 20px;
+    margin-left: 30px;
+    display: flex;
+}
+.info-utilisateur {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 16px;
+    font-weight: 100;
+    width: 600px;
 }
 
 .user-info p {
@@ -48,20 +59,24 @@
     padding-left: 50px;
 }
 
-.user-perso {
-    margin-top: 10px;
-    margin-left: 30px;
-    justify-content: space-between;
-}
-
 #name {
     margin-top: 35px;
-    text-align: center;
-    color: #9d9d9d
+    text-align: left;
+    color: #777474;
+    font-weight: bold;
 }
 
 .reservation {
     margin-top: 20px;
     display: flex;
     // justify-content: space-between;
+}
+
+#user {
+    margin: 8px 0px;
+    color: #898888;
+}
+
+#email {
+    color: #898888;
 }
