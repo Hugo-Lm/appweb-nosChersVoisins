@@ -25,7 +25,7 @@ user1 = User.new(
 )
 user1.save!
 file = URI.open('https://www.sardiniauniqueproperties.com/wp-content/uploads/2015/10/square-profile-pic-2.jpg')
-user.photo.attach(io: file, filename: 'user1.jpg', content_type: 'image/jpeg')
+user1.photo.attach(io: file, filename: 'user1.jpg', content_type: 'image/jpeg')
 
 user2 = User.new(
   first_name: "Francis",
@@ -36,7 +36,7 @@ user2 = User.new(
 )
 user2.save!
 file = URI.open('https://worldbusinessfitness.com/wp-content/uploads/2018/01/opulent-profile-square-07.jpg')
-user.photo.attach(io: file, filename: 'user2.jpg', content_type: 'image/jpeg')
+user2.photo.attach(io: file, filename: 'user2.jpg', content_type: 'image/jpeg')
 
 user3 = User.new(
   first_name: "Natasha",
@@ -47,7 +47,7 @@ user3 = User.new(
 )
 user3.save!
 file = URI.open('https://worldbusinessfitness.com/wp-content/uploads/2018/06/opulent-profile-square-06.jpg')
-user.photo.attach(io: file, filename: 'user3.jpg', content_type: 'image/jpeg')
+user3.photo.attach(io: file, filename: 'user3.jpg', content_type: 'image/jpeg')
 
 user4 = User.new(
   first_name: "Jean-Michel",
@@ -58,7 +58,7 @@ user4 = User.new(
 )
 user4.save!
 file = URI.open('https://images.squarespace-cdn.com/content/v1/53af1c83e4b0b3e1fc2000bd/1446397787787-SI1H06DNOL2QJSX13DCD/ke17ZwdGBToddI8pDm48kOyctPanBqSdf7WQMpY1FsRZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpwwQIrqN0bcqL_6-iJCOAA0qwytzcs0JTq1XS2aqVbyK6GtMIM7F0DGeOwCXa63_4k/Randy+Krum+Profile+Photo+square.jpg')
-user.photo.attach(io: file, filename: 'user4.jpg', content_type: 'image/jpeg')
+user4.photo.attach(io: file, filename: 'user4.jpg', content_type: 'image/jpeg')
 
 
 puts "Users created"
