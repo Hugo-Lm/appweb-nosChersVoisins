@@ -1,6 +1,10 @@
 <div class="container-form">
 
+<div class="text-form-pdt">
+
   <div class="form">
+
+<h2>Renseignez votre produit</h2>
 
     <%= simple_form_for [ @product ] do |f| %>
       <%= f.input :name %>
@@ -12,6 +16,7 @@
     <div class ="btn_new">
       <%= f.submit "Submit", class: "green-bouton" %>
     <% end %>
+    </div>
     </div>
   </div>
 </div>
