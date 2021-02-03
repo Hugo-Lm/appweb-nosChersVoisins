@@ -20,7 +20,7 @@
         <li class="nav-item dropdown">
           <%= link_to user_path(current_user) do %>
             <!-- <img class="profil-picture" id="navbarDropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/ssaunier" /> -->
-            <%= cl_image_tag current_user.photo.key, crop: :fill, class: "profil-picture hand-pointer" %>
+            <%# <%= cl_image_tag current_user.photo.key, crop: :fill, class: "profil-picture hand-pointer" %> %>
           <% end %>
         </li>
       <% else %>
